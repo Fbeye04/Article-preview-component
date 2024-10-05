@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  width: 21rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem hsl(217, 19%, 35%);
+}
+.card .card-img img {
+  border-radius: 1rem 1rem 0 0;
+  width: 21rem;
+}
+.card .card-description {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card .card-description h1 {
+  font-size: 1rem;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.card .card-description p {
+  color: hsl(214, 17%, 51%);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.card .card-profile {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+.card .card-profile #avatar {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.card .card-profile hgroup h2,
+.card .card-profile hgroup p {
+  font-size: 0.9rem;
+}
+.card .card-profile hgroup h2 {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.card .card-profile hgroup p {
+  color: hsl(212, 23%, 69%);
+}
+.card .card-profile .share-container {
+  background-color: hsl(210, 46%, 95%);
+  width: 2rem;
+  position: relative;
+  border-radius: 50%;
+}
+.card .card-profile .share-container img {
+  width: 1rem;
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  left: 0.6rem;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  color: hsl(214, 17%, 51%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 0.5rem 0;
+  box-shadow: -0.1rem -0.1rem 0.5rem #ccc;
+  font-weight: 500;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */

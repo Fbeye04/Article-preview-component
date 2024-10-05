@@ -13,15 +13,22 @@
     />
 
     <title>Frontend Mentor | Article preview component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <main>
-      <section>
-        <div class="img-container">
+      <section class="card">
+        <div class="card-img">
           <img src="./images/drawers.jpg" alt="Drawers image" />
         </div>
 
-        <div class="description-container">
+        <div class="card-description">
           <h1>
             Shift the overall look and feel by adding these wonderful touches to
             furniture in your home
@@ -34,15 +41,25 @@
           </p>
         </div>
 
-        <div class="profile-container">
-          <img src="./images/avatar-michelle.jpg" alt="user avatar" />
+        <div class="card-profile">
+          <img
+            src="./images/avatar-michelle.jpg"
+            alt="user avatar"
+            id="avatar"
+          />
 
           <hgroup>
             <h2>Michelle Appleton</h2>
             <p>28 Jun 2020</p>
           </hgroup>
 
-          <img src="./images/icon-share.svg" alt="share icon" />
+          <div class="share-container">
+            <img
+              src="./images/icon-share.svg"
+              alt="share icon"
+              id="share-icon"
+            />
+          </div>
         </div>
       </section>
     </main>
