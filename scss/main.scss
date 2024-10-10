@@ -12,6 +12,18 @@
   align-items: center;
 }
 
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin dekstop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
 body {
   @include flexCenter;
   min-height: 100vh;
@@ -30,11 +42,25 @@ main {
   margin: 2rem;
   border-radius: 1rem;
   box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem $very-dark-grayish-blue;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    width: 46rem;
+    transition: 5ms ease-in-out;
+  }
 
   .card-img {
     img {
       border-radius: 1rem 1rem 0 0;
       width: 21rem;
+
+      @include tablet {
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+      }
     }
   }
 
@@ -55,46 +81,52 @@ main {
       font-size: 0.9rem;
       font-weight: weight(semi-bold);
     }
-  }
 
-  .card-profile {
-    display: flex;
-    justify-content: space-around;
-    margin: 1rem 0;
+    .card-profile {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
 
-    #avatar {
-      width: 2.5rem;
-      border-radius: 50%;
-    }
+      .avatar-profile {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
 
-    hgroup {
-      h2,
-      p {
-        font-size: 0.9rem;
+        #avatar {
+          width: 2.5rem;
+          border-radius: 50%;
+        }
+
+        hgroup {
+          h2,
+          p {
+            font-size: 0.9rem;
+          }
+
+          h2 {
+            color: $very-dark-grayish-blue;
+            font-weight: weight(bold);
+          }
+
+          p {
+            color: $grayish-blue;
+          }
+        }
       }
 
-      h2 {
-        color: $very-dark-grayish-blue;
-        font-weight: weight(bold);
-      }
+      .share-container {
+        background-color: $light-grayish-blue;
+        width: 2rem;
+        position: relative;
+        border-radius: 50%;
 
-      p {
-        color: $grayish-blue;
-      }
-    }
-
-    .share-container {
-      background-color: $light-grayish-blue;
-      width: 2rem;
-      position: relative;
-      border-radius: 50%;
-
-      img {
-        width: 1rem;
-        position: absolute;
-        top: 0.7rem;
-        right: 1rem;
-        left: 0.6rem;
+        img {
+          width: 1rem;
+          position: absolute;
+          top: 0.7rem;
+          right: 1rem;
+          left: 0.6rem;
+        }
       }
     }
   }

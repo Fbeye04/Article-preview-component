@@ -28,10 +28,26 @@ main {
   margin: 2rem;
   border-radius: 1rem;
   box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem hsl(217, 19%, 35%);
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 55rem) {
+  .card {
+    flex-direction: row;
+    width: 46rem;
+    transition: 5ms ease-in-out;
+  }
 }
 .card .card-img img {
   border-radius: 1rem 1rem 0 0;
   width: 21rem;
+}
+@media (min-width: 55rem) {
+  .card .card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
 }
 .card .card-description {
   padding: 1.5rem 2rem;
@@ -49,33 +65,38 @@ main {
   font-size: 0.9rem;
   font-weight: 500;
 }
-.card .card-profile {
+.card .card-description .card-profile {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 1rem 0;
 }
-.card .card-profile #avatar {
+.card .card-description .card-profile .avatar-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.card .card-description .card-profile .avatar-profile #avatar {
   width: 2.5rem;
   border-radius: 50%;
 }
-.card .card-profile hgroup h2,
-.card .card-profile hgroup p {
+.card .card-description .card-profile .avatar-profile hgroup h2,
+.card .card-description .card-profile .avatar-profile hgroup p {
   font-size: 0.9rem;
 }
-.card .card-profile hgroup h2 {
+.card .card-description .card-profile .avatar-profile hgroup h2 {
   color: hsl(217, 19%, 35%);
   font-weight: 700;
 }
-.card .card-profile hgroup p {
+.card .card-description .card-profile .avatar-profile hgroup p {
   color: hsl(212, 23%, 69%);
 }
-.card .card-profile .share-container {
+.card .card-description .card-profile .share-container {
   background-color: hsl(210, 46%, 95%);
   width: 2rem;
   position: relative;
   border-radius: 50%;
 }
-.card .card-profile .share-container img {
+.card .card-description .card-profile .share-container img {
   width: 1rem;
   position: absolute;
   top: 0.7rem;
